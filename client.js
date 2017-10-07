@@ -10,7 +10,8 @@ function readyNow(){
 function submitClick(){
   console.log('click');
   appendTable();
-  newEmployees();
+  console.log('#salaryval');
+  // newEmployees();
   // clearInput();
   //monthlyAvarage();
 }
@@ -23,14 +24,16 @@ function appendDom(){
 $table = $('<table></table>');
 $table.append('<thead><tr><th>First Name</th><th>Last Name</th><th>ID Number</th><th>Job Title</th><th>Anual Salary<th></thead>');
 
-$tbody = $('<tbody id="tableBody"></tbody>');
-$table.append($tbody);
 
-  $('.container').append($table);
+
+  $('.inputContainer').append($table);
 
 }
 function appendTable(){
-  $('.bodyContainer').append('<thead><tr><th>'+ 'Employees First Name : '+ $('#firstName').val() + '</th></thead>');
+  $('.bodyContainer').append('<thead><tr><th>'+ $("#firstName").val()+
+  '</th><th>' + $('#lastName').val() +'</th><th>' + $('#IDnumber').val() +
+  '</th><th>' + $('#jobTitle').val() + '</th><th id="salaryval">' +
+  $('#anualSalary').val() + '</th></tr></thead>');
 
   // $('.bodyContainer').append('<h1>'+ 'Employees Last Name : ' + $('#lastName').val() + '</h1>');
   //
@@ -39,9 +42,11 @@ function appendTable(){
   // $('.bodyContainer').append('<h1>'+ 'Employees Job Title : ' + $('#jobTitle').val() + '</h1>');
   //
   // $('.bodyContainer').append('<h1>'+ 'Employees anual salary : ' + $('#anualSalary').val() + '</h1>');
-
+  $tbody = $('<tbody id="tableBody"></tbody>');
+  $table.append($tbody);
 
 }
+
 // function monthlyAvarage(){
 // var salarys = [];
 //
@@ -53,20 +58,20 @@ function appendTable(){
 //
 //
 // }
-function newEmployees(){
-var Employee = function(firstName, lastName, idNumber, jobTitle, anualSalary){
-  this.firstName = $('#firstName').val();
-  this.lastName= $('#lastName').val();
-  this.idNumber= $('#IDnumber').val();
-  this.jobTitle= $('#jobTitle').val();
-  this.anualSalary= $('#anualSalary').val();
+// function newEmployees(){
+// var Employee = function(firstName, lastName, idNumber, jobTitle, anualSalary){
+//   this.firstName = $('#firstName').val();
+//   this.lastName= $('#lastName').val();
+//   this.idNumber= $('#IDnumber').val();
+//   this.jobTitle= $('#jobTitle').val();
+//   this.anualSalary= $('#anualSalary').val();
 
-};
-console.log($('#firstName').val());
-  var newEmployee = new Employee();
-var employees= [];
-employees.push(newEmployee);
-
-}
+// };
+// console.log($('#firstName').val());
+//   var newEmployee = new Employee();
+// var employees= [];
+// employees.push(newEmployee);
+//
+// }
 
 // functionclear/
