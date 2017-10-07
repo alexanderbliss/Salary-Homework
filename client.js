@@ -1,12 +1,72 @@
 console.log('script sourced');
-
 $(document).ready(readyNow);
 
 function readyNow(){
   console.log('ready');
   $('#submit').on('click',submitClick);
+  appendDom();
 }
 
 function submitClick(){
   console.log('click');
+  appendTable();
+  newEmployees();
+  // clearInput();
+  //monthlyAvarage();
 }
+function appendDom(){
+
+  $header = $('<h1>List of Employees</h1>');
+  $('.bodyContainer').append($header);
+
+
+$table = $('<table></table>');
+$table.append('<thead><tr><th>First Name</th><th>Last Name</th><th>ID Number</th><th>Job Title</th><th>Anual Salary<th></thead>');
+
+$tbody = $('<tbody id="tableBody"></tbody>');
+$table.append($tbody);
+
+  $('.container').append($table);
+
+}
+function appendTable(){
+  $('.bodyContainer').append('<thead><tr><th>'+ 'Employees First Name : '+ $('#firstName').val() + '</th></thead>');
+
+  // $('.bodyContainer').append('<h1>'+ 'Employees Last Name : ' + $('#lastName').val() + '</h1>');
+  //
+  // $('.bodyContainer').append('<h1>'+ 'Employees ID number : ' + $('#IDnumber').val() + '</h1>');
+  //
+  // $('.bodyContainer').append('<h1>'+ 'Employees Job Title : ' + $('#jobTitle').val() + '</h1>');
+  //
+  // $('.bodyContainer').append('<h1>'+ 'Employees anual salary : ' + $('#anualSalary').val() + '</h1>');
+
+
+}
+// function monthlyAvarage(){
+// var salarys = [];
+//
+// //for(var i = 0; i<salarys.length; i +=1){
+//
+// salarys.push(Employees);
+//
+// console.log(salarys);
+//
+//
+// }
+function newEmployees(){
+var Employee = function(firstName, lastName, idNumber, jobTitle, anualSalary){
+  this.firstName = $('#firstName').val();
+  this.lastName= $('#lastName').val();
+  this.idNumber= $('#IDnumber').val();
+  this.jobTitle= $('#jobTitle').val();
+  this.anualSalary= $('#anualSalary').val();
+
+};
+console.log($('#firstName').val());
+  var newEmployee = new Employee();
+var employees= [];
+employees.push(newEmployee);
+
+}
+
+// functionclear/
