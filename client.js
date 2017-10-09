@@ -5,29 +5,26 @@ function readyNow(){
   console.log('ready');
   $('#submit').on('click',submitClick);
   appendDom();
+
 }
 
 function submitClick(){
   console.log('click');
   appendTable();
-$('.salaryCost').append('<h1>'+ $("salarys").val()+'</h1>');
-  // newEmployees();
-  // clearInput();
-  //monthlyAvarage();
+
+console.log(id=sum);
 }
 function appendDom(){
-
   $header = $('<h1>List of Employees</h1>');
   $('.bodyContainer').append($header);
 
 
 $table = $('<table></table>');
-$table.append('<thead><tr><th>First Name</th><th>Last Name</th><th>ID Number</th><th>Job Title</th><th>Anual Salary<th></thead>');
+$table.append('<thead><tr><th>First Name</th><th>Last Name</th><th>ID Number</th><th>Job Title</th><th>Annual Salary<th></thead>');
 
 
 
   $('.inputContainer').append($table);
-
 }
 function appendTable(){
   $('.bodyContainer').append('<thead><tr><th>'+  $("#firstName").val()+
@@ -40,41 +37,18 @@ function appendTable(){
 salarys.push(parseInt(id=salaryval));
 console.log(salarys);
 
-  // $('.bodyContainer').append('<h1>'+ 'Employees Last Name : ' + $('#lastName').val() + '</h1>');
-  //
-  // $('.bodyContainer').append('<h1>'+ 'Employees ID number : ' + $('#IDnumber').val() + '</h1>');
-  //
-  // $('.bodyContainer').append('<h1>'+ 'Employees Job Title : ' + $('#jobTitle').val() + '</h1>');
-  //
-  // $('.bodyContainer').append('<h1>'+ 'Employees anual salary : ' + $('#anualSalary').val() + '</h1>');
   $tbody = $('<tbody id="tableBody"></tbody>');
   $table.append($tbody);
-}
 
+
+}
+//this whole section dosent work and im not sure why.
+
+id=sums = sum;
 var salarys=[];
-var totalSalarys = 0;
-for(var i =0; i<salarys.length; i+=1){
-  totalsalarys = sum.salarys[i];
-console.log(totalSalarys);
-$('.container').append('<h2>LOWER</h2>');
+var sum =0;
+for(var i =0; i> salarys.length; i+=1 ){
+  sum += salarys[i] ;
 
 }
-
-
-// function newEmployees(){
-// var Employee = function(firstName, lastName, idNumber, jobTitle, anualSalary){
-//   this.firstName = $('#firstName').val();
-//   this.lastName= $('#lastName').val();
-//   this.idNumber= $('#IDnumber').val();
-//   this.jobTitle= $('#jobTitle').val();
-//   this.anualSalary= $('#anualSalary').val();
-
-// };
-// console.log($('#firstName').val());
-//   var newEmployee = new Employee();
-// var employees= [];
-// employees.push(newEmployee);
-//
-// }
-
-// functionclear/
+$('.salaryCost').append('<h1>'+ $("#sums") +'</h1>');
