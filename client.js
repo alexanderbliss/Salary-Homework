@@ -10,7 +10,7 @@ function readyNow(){
 function submitClick(){
   console.log('click');
   appendTable();
-  console.log('#salaryval');
+
   // newEmployees();
   // clearInput();
   //monthlyAvarage();
@@ -35,6 +35,11 @@ function appendTable(){
   '</th><th>' + $('#jobTitle').val() + '</th><th id="salaryval">' +
   $('#anualSalary').val() + '</th></tr></thead>');
 
+   id=salaryval = $('#anualSalary').val();
+
+salarys.push(parseInt(id=salaryval));
+console.log(salarys);
+
   // $('.bodyContainer').append('<h1>'+ 'Employees Last Name : ' + $('#lastName').val() + '</h1>');
   //
   // $('.bodyContainer').append('<h1>'+ 'Employees ID number : ' + $('#IDnumber').val() + '</h1>');
@@ -44,20 +49,18 @@ function appendTable(){
   // $('.bodyContainer').append('<h1>'+ 'Employees anual salary : ' + $('#anualSalary').val() + '</h1>');
   $tbody = $('<tbody id="tableBody"></tbody>');
   $table.append($tbody);
-
 }
 
-// function monthlyAvarage(){
-// var salarys = [];
-//
-// //for(var i = 0; i<salarys.length; i +=1){
-//
-// salarys.push(Employees);
-//
-// console.log(salarys);
-//
-//
-// }
+var salarys=[];
+var totalSalarys = 0;
+for(var i =0; i<salarys.length; i+=1){
+  totalsalarys = sum.salarys[i];
+console.log(totalSalarys);
+
+append
+}
+
+
 // function newEmployees(){
 // var Employee = function(firstName, lastName, idNumber, jobTitle, anualSalary){
 //   this.firstName = $('#firstName').val();

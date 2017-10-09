@@ -21,17 +21,11 @@ th {
   color: white;
   font-size: 18px;
 }
-/*.inputContainer{
-justify-content: space-around;
- background-color: red;
-}*/
 
 #salaryval{
   color: red;
 }
-/*.text{
-  justify-content: center;
-}*/
+
 input {
     width: 18%;
 }
