@@ -10,7 +10,7 @@ function readyNow(){
 function submitClick(){
   console.log('click');
   appendTable();
-
+$('.salaryCost').append('<h1>'+ $("salarys").val()+'</h1>');
   // newEmployees();
   // clearInput();
   //monthlyAvarage();
@@ -30,7 +30,7 @@ $table.append('<thead><tr><th>First Name</th><th>Last Name</th><th>ID Number</th
 
 }
 function appendTable(){
-  $('.bodyContainer').append('<thead><tr><th>'+ $("#firstName").val()+
+  $('.bodyContainer').append('<thead><tr><th>'+  $("#firstName").val()+
   '</th><th>' + $('#lastName').val() +'</th><th>' + $('#IDnumber').val() +
   '</th><th>' + $('#jobTitle').val() + '</th><th id="salaryval">' +
   $('#anualSalary').val() + '</th></tr></thead>');
@@ -56,8 +56,8 @@ var totalSalarys = 0;
 for(var i =0; i<salarys.length; i+=1){
   totalsalarys = sum.salarys[i];
 console.log(totalSalarys);
+$('.container').append('<h2>LOWER</h2>');
 
-append
 }
 
 
